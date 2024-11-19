@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "f50b7528-0572-412e-a240-d02a84b721ed",
+		"name": "Pokemon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18641926"
+	},
+	"item": [
+		{
+			"name": "GET Pikachu Habiilidad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"",
+							"const secondAbility = response.abilities[1].ability.name;",
+							"",
+							"console.info(\"La habilidad de Pikachu en la segunda posición es: \", secondAbility);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/pikachu?=",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"pikachu"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
